@@ -1,5 +1,5 @@
 {
-  "name": "AIreactnative",
+  "name": "voice",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,17 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@react-native-community/voice": "^1.1.9",
-    "@react-navigation/native": "^6.1.10",
-    "@react-navigation/native-stack": "^6.9.18",
-    "axios": "^1.6.7",
-    "nativewind": "^2.0.11",
     "react": "18.2.0",
-    "react-native": "0.73.4",
-    "react-native-responsive-screen": "^1.4.2",
-    "react-native-safe-area-context": "^4.9.0",
-    "react-native-screens": "^3.29.0",
-    "react-native-tts": "^4.1.0"
+    "react-native": "0.73.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -37,7 +28,6 @@
     "jest": "^29.6.3",
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
-    "tailwindcss": "^3.3.2",
     "typescript": "5.0.4"
   },
   "engines": {
