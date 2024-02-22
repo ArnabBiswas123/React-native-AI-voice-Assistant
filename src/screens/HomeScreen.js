@@ -46,21 +46,6 @@ export default function HomeScreen() {
     fetchResponse();
   },[fetchAgain])
 
-  // useEffect(()=>{
-  //   setLoading(newload=>!newload);
-  // },[load])
-
-
-
-  // useEffect(() => {
-  //   // Check if it's not the initial render
-  //   if (!isInitialRender.current) {
-  //     setLoading(newload => !newload);
-  //   } else {
-  //     // If it's the initial render, set the flag to false
-  //     isInitialRender.current = false;
-  //   }
-  // }, [load]);
 
 
   const onSpeechResultsHandler = e => {
@@ -72,7 +57,7 @@ export default function HomeScreen() {
 
   };
   const onSpeechErrorHandler = e => {
-    // console.log('error')
+
     console.log(e);
   };
 
@@ -101,6 +86,7 @@ export default function HomeScreen() {
 
   const clear = () => {
     setMessages([]);
+    setSpeaking(false)
     setLoad(newload=>!newload)
   };
 
@@ -118,7 +104,6 @@ export default function HomeScreen() {
     try {
       await Voice.stop();
       setRecording(false);
-      // setFetchAgain(!fetchAgain)
       
     } catch (error) {
       console.log(error);
@@ -136,10 +121,10 @@ export default function HomeScreen() {
 
       setLoading(true)
       
-    //  setLoad(newload=>!newload)
+ 
       apiCall(results?.trim(), newMessages).then(res => {
   
-        // console.log('got API data', res);
+      
         if (res.success) {
           setMessages([...res.data]);
           setLoading(false);
